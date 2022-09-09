@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { green } from "@mui/material/colors";
 
 
 export default function FirstView() {
@@ -41,7 +42,7 @@ export default function FirstView() {
     <section id="home" style={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
       <Container spacing={2} data-aos="zoom-in" data-aos-delay="500">
         <Typography variant="h1">Bilal Ahmed</Typography>
-        <p>I'm <span ref={el}></span></p>
+        <p>I'm <span ref={el} style={{ textTransform: 'uppercase'}}></span></p>
         <div className="social-links">
           {social_profile.map((d, k) => (
             <a href={d.profileLink} target="_blank" rel="noreferrer">{d.icon}</a>

@@ -32,7 +32,7 @@ export default function About() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} >
-            <img src={BackgroundImage} className="img-fluid" alt="" />
+            <img src={BackgroundImage} style={{ display: 'block', width: '100%' }} alt="" />
           </Grid>
           <Grid item xs={12} sm={12} md={8} lg={8}>
             <Typography variant="h4" gutterBottom sx={{ marginTop: 3 }}>

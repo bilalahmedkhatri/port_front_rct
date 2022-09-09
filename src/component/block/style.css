@@ -27,7 +27,7 @@
 
 #home h1 {
     margin: 0;
-    font-size: 64px;
+    font-size: 100px;
     font-weight: 700;
     line-height: 56px;
     color: #45505b;
@@ -35,8 +35,9 @@
 
 #home p {
     color: #45505b;
-    margin: 15px 0 0 0;
-    font-size: 26px;
+    margin: 25px 0 0 0;
+    font-size: 45px;
+    font-weight: 600;
     font-family: "Poppins", sans-serif;
 }
 
@@ -46,7 +47,7 @@
 }
 
 #home .social-links {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 #home .social-links a {
