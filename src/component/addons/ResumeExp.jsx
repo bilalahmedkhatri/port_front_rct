@@ -25,10 +25,10 @@ export default function ResumeExp() {
     const classes = useStyle()
     return (
         <Box sx={{ maxWidth: '100%' }}>
-            <Stepper orientation="vertical" sx={{ '& .MuiStepConnector-line': { borderColor: green[500] } }} >
+            <Stepper orientation="vertical" sx={{ '& .MuiStepConnector-line': { borderLeft: `2px solid ${green[500]}`} }} >
                 {experience.map((step, index) => (
-                    <Step active={4} sx={{ '& .MuiStepContent-root': { borderColor: green[500] } }}>
-                        <StepLabel sx={{ '& .MuiStepIcon-root.Mui-active': { color: green[500] } }}>
+                    <Step active={4} sx={{ '& .MuiStepContent-root': { borderLeft: `2px solid ${green[500]}`} }}>
+                        <StepLabel sx={{ '& .MuiStepIcon-root.Mui-active': { color: green[500],  } }}>
                             <Typography className={classes.root} varaint='h4'>{step.designation}</Typography>
                         </StepLabel>
                         <StepContent>
