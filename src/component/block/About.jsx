@@ -11,7 +11,7 @@ export default function About() {
 
   const infoData2 = [
     { data: "Degree:", info: "Bachelor", option: false },
-    { data: "Email:", info: "bilalahmedkhatri@outlook.com", option: "mail" },
+    { data: "Email:", info: "bilalahmedkhatri@outlook.com", option: "mail"},
     { data: "Freelance:", info: "Available", option: false },
   ]
   return (
@@ -52,7 +52,7 @@ export default function About() {
             <Grid container spacing={1} >
               <Grid item xs={12} sm={12} md={6} lg={6}>
                 {infoData1.map((d, k) => (
-                  <AboutList key={k} info={d.info} data={d.data} option={d.option} />
+                  <AboutList key={k} info={d.info} data={d.data} option={d.option} name={d.name}/>
                 ))}
               </Grid>
               <Grid item xs={12} sm={12} md={6} lg={6}>

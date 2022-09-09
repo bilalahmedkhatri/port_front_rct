@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Box, Typography } from '@mui/material'
+import { Box, Link, Typography } from '@mui/material'
 import './style.css'
 
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -25,39 +25,21 @@ export function Header(props) {
     { menus: "contact", icons: (<PermPhoneMsgIcon fontSize="medium" />) },
   ]
   return (
-    <>
-      <Box id="header1" sx={{ display: 'flex', flexDirection: "column", justifyContent: "center" }}>
-        <nav id="navlink" className="navbar nav-menu">
-          <ul>
-            {menusIcons.map((x, key) => (
-              <li key={key}>
-                <a href={`#${x.menus}`} className={`nav-link scrollto ${isActive === x.menus && 'active'}`} onClick={() => setIsActive(x.menus)}>
-                  <ListItemIcon sx={{ minWidth: 0 }} >
-                    {x.icons}
-                  </ListItemIcon>
-                  <span style={{ color: grey[800], fontSize: "18px", fontWeight: '600' }}>{x.menus.toUpperCase()}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </Box>
-      {/* <header id="header" class="d-flex flex-column justify-content-center">
-
-        <nav id="navbar" class="navbar nav-menu">
-          <ul>
-            <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-            <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-            <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-            <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-            <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-            <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-          </ul>
-        </nav> 
-
-      </header>*/}
-
-
-    </>
+    <Box id="header1" sx={{ display: 'flex', flexDirection: "column", justifyContent: "center" }}>
+      <nav id="navlink" className="navbar nav-menu">
+        <ul>
+          {menusIcons.map((x, key) => (
+            <li key={key}>
+              <Link href={`#${x.menus}`} underline="none" className={`nav-link scrollto ${isActive === x.menus && 'active'}`} onClick={() => setIsActive(x.menus)}>
+                <ListItemIcon sx={{ minWidth: 0 }} >
+                  {x.icons}
+                </ListItemIcon>
+                <span style={{ color: grey[800], fontSize: "18px", fontWeight: '600' }}>{x.menus.toUpperCase()}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </Box>
   )
 }

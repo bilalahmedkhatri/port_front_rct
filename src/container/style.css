@@ -102,3 +102,15 @@
 *, ::after, ::before {
   box-sizing: border-box;
 }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #d7dce1;
+  color: #33363a;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 4rem;
+}

@@ -13,8 +13,10 @@ export default function InsetList({ key, data, info, option }) {
             let web_add = 'http://' + info
             return <Link href={web_add} rel="noreferrer" target='_blank' underline="none" color='inherit'><ListItemText primary={info} /></Link>
         } else if (option === 'mail') {
+            let find_index = info.indexOf('@')
+            let name = info.slice(0, find_index)
             let mailto = "mailto:" + info
-            return <Link href={mailto} rel="noreferrer" target='_blank' underline="none" color='inherit'><ListItemText primary={info} /></Link>
+            return <Link href={mailto} rel="noreferrer" target='_blank' underline="none" color='inherit'><ListItemText primary={name} /></Link>
         } else {
             return <ListItemText primary={info} />
         }
@@ -32,20 +34,6 @@ export default function InsetList({ key, data, info, option }) {
                 <ListItemText primary={data} sx={{ maxWidth: '5.4rem', }} primaryTypographyProps={{ fontWeight: 600 }} />
                 {mailLink()}
             </ListItem>
-            {/* <ListItem disablePadding>
-                <ListItemIcon sx={{ minWidth: '1.78em' }}>
-                    <StarIcon />
-                </ListItemIcon>
-                <ListItemText primary="Phone:" sx={{ maxWidth: '5rem' }} primaryTypographyProps={{ fontWeight: 600 }} />
-                <ListItemText primary="+92 321 3009321" />
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemIcon sx={{ minWidth: '1.78em' }}>
-                    <StarIcon />
-                </ListItemIcon>
-                <ListItemText primary="City:" sx={{ maxWidth: '5rem' }} primaryTypographyProps={{ fontWeight: 600 }} />
-                <ListItemText primary="Karachi, Pakistan" />
-            </ListItem> */}
         </List>
     );
 }

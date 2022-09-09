@@ -40,7 +40,7 @@ export default function FirstView() {
   return (
     // ======= Home Section =======
     <section id="home" style={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
-      <Container spacing={2} data-aos="zoom-in" data-aos-delay="500">
+      <Container spacing={2} data-aos="zoom-in" data-aos-delay="500" sx={{ zIndex: '9990'}}>
         <Typography variant="h1">Bilal Ahmed</Typography>
         <p>I'm <span ref={el} style={{ textTransform: 'uppercase'}}></span></p>
         <div className="social-links">

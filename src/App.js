@@ -1,24 +1,19 @@
+import { useEffect } from "react";
 import "./App.css";
 import { Header, Body, Footer } from "./container";
-// import axios from 'axios'
-// import { useState, useEffect } from 'react'
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 function App() {
-  // const [data, setData] = useState([])
-
-  // useEffect(() => {
-  //     async function getAllTestimonials(){
-  //         try {
-  //             const testimonials = await axios.get('http://localhost:8000/portfolio/form/')
-  //             console.log(testimonials.data)
-  //             setData(testimonials.data)
-  //         }
-  //         catch (error) {
-  //             console.log(error)
-  //         }
-  //     }
-  //     getAllTestimonials()
-  // }, [])
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1300,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  }, [])
 
   return (
     <>
