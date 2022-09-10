@@ -46,7 +46,7 @@ export default function Slider() {
   useEffect(() => {
     async function getTestimonial() {
       try {
-        const testimonial = await axios.get('https://portfolio.azeemlab.com/testimonial/')
+        const testimonial = await axios.get('/testimonial/')
         setTestimonials(testimonial.data)
       } catch (error) {
         console.log(error)
@@ -71,7 +71,7 @@ export default function Slider() {
                 <Stack direction="row" style={{ justifyContent: "center", display: "flex" }} spacing={1}>
                   <Avatar
                     alt="Remy Sharp"
-                    src="assets/img/testimonials/testimonials-1.jpg"
+                    src=""
                     sx={{ width: 120, height: 120 }}
                   />
                 </Stack>

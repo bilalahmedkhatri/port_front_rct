@@ -1,9 +1,9 @@
 {
-  "name": "app6frontent",
+  "name": "Bilal Ahmed - PortFolio",
   "homepage": "https://bilalahmed-dev.azeemlab.com",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://portfolio.azeemlab.com",
+  "proxy": "http://localhost:8000",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",

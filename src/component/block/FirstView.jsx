@@ -45,7 +45,7 @@ export default function FirstView() {
         <p>I'm <span ref={el} style={{ textTransform: 'uppercase'}}></span></p>
         <div className="social-links">
           {social_profile.map((d, k) => (
-            <a href={d.profileLink} target="_blank" rel="noreferrer">{d.icon}</a>
+            <a key={k} href={d.profileLink} target="_blank" rel="noreferrer">{d.icon}</a>
           ))}
         </div>
       </Container>
