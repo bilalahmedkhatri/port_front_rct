@@ -59,19 +59,20 @@ export default function Slider() {
     <ThemeProvider theme={theme}>
       <Swiper
         modules={[Navigation, Autoplay]}
-        autoplay={{ delay: 1300 }}
+        autoplay={{ delay: 5000 }}
         navigation
         // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
       >
         {
           testimonials.map((v, key) => {
+            console.log(v.test_image_02)
             return (
               <SwiperSlide align='center' key={key}>
                 <Stack direction="row" style={{ justifyContent: "center", display: "flex" }} spacing={1}>
                   <Avatar
-                    alt="Remy Sharp"
-                    src=""
+                    alt={v.full_name}
+                    src={v.test_image_02}
                     sx={{ width: 120, height: 120 }}
                   />
                 </Stack>

@@ -6,7 +6,7 @@ import StarIcon from '@mui/icons-material/Star';
 import { Link } from '@mui/material';
 
 
-export default function InsetList({ key, data, info, option }) {
+export default function InsetList({ data, info, option }) {
 
     const mailLink = () => {
         if (option === 'link') {
@@ -27,7 +27,7 @@ export default function InsetList({ key, data, info, option }) {
             sx={{ pt: 0, pb: 0, width: '100%', maxWidth: '100%', bgcolor: 'background.paper' }}
             aria-label="contacts"
         >
-            <ListItem disablePadding key={key} >
+            <ListItem disablePadding >
                 <ListItemIcon sx={{ minWidth: '1.78em' }}>
                     <StarIcon />
                 </ListItemIcon>

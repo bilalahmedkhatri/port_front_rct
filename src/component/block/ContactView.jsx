@@ -54,7 +54,7 @@ export default function ContactView() {
         <Grid item xs={9} sm md={8} lg={8} container>
           <ContactInfo
             MainTitle="Location:"
-            Paragraph="Khatri Palace, Daryabad, Karachi"
+            Paragraph="Karachi, Pakistan"
           />
         </Grid>
       </Grid>

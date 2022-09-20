@@ -54,7 +54,7 @@ LinearProgressWithLabel.propTypes = {
 // stoping pregressBar for increase of limit
 let x = 0
 
-export default function ProgressBar2({ key, language, stopValue, timeRange }) {
+export default function ProgressBar2({ language, stopValue, timeRange }) {
     const [progress, setProgress] = React.useState(0);
 
     x = progress
@@ -67,7 +67,7 @@ export default function ProgressBar2({ key, language, stopValue, timeRange }) {
         }, timeRange);
     }, []);
     return (
-        <Box sx={{ width: '100%', mb: 1 }} key={key}>
+        <Box sx={{ width: '100%', mb: 1 }} >
             <LinearProgressWithLabel value={progress} language={language} />
         </Box>
     );

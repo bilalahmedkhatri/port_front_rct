@@ -12,7 +12,7 @@ export default function Resume() {
                         <Typography varaint='body1' >
                             Focused and quick-learning Software Engineer with 3+ years of experience in web development, and programming. I already worked on various projects and clients.
                         </Typography>
-                        <Typography variant="h4" gutterTop mt={2}>
+                        <Typography variant="h4" mt={2}>
                             Professional Experience
                         </Typography>
                     </Grid>
