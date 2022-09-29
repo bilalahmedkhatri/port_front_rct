@@ -9,6 +9,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { green } from "@mui/material/colors";
+import SocialLinks from "../addons/SocialLinks";
 
 
 export default function FirstView() {
@@ -43,11 +44,7 @@ export default function FirstView() {
       <Container spacing={2} data-aos="zoom-in" data-aos-delay="500" sx={{ zIndex: '9990'}}>
         <Typography variant="h1">Bilal Ahmed</Typography>
         <p>I'm <span ref={el} style={{ textTransform: 'uppercase'}}></span></p>
-        <div className="social-links">
-          {social_profile.map((d, k) => (
-            <a key={k} href={d.profileLink} target="_blank" rel="noreferrer">{d.icon}</a>
-          ))}
-        </div>
+        <SocialLinks social_profile={social_profile}/>
       </Container>
     </section>
   )

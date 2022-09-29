@@ -10,19 +10,21 @@ import PersonIcon from '@mui/icons-material/Person';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import SettingsOverscanIcon from '@mui/icons-material/SettingsOverscan';
 import { grey } from "@mui/material/colors";
 
 
-export function Header(props) {
+export function Header() {
 
   const [isActive, setIsActive] = useState('home')
 
   const menusIcons = [
-    { menus: "home", icons: (<HouseIcon fontSize="medium" />) },
-    { menus: "about", icons: (<PersonIcon fontSize="medium" />) },
-    { menus: "resume", icons: (<DescriptionIcon fontSize="medium" />) },
-    { menus: "testimonials", icons: (<ReviewsIcon fontSize="medium" />) },
-    { menus: "contact", icons: (<PermPhoneMsgIcon fontSize="medium" />) },
+    { link: "#home", menus: "home", icons: (<HouseIcon fontSize="medium" />) },
+    { link: "#about", menus: "about", icons: (<PersonIcon fontSize="medium" />) },
+    { link: "#resume", menus: "resume", icons: (<DescriptionIcon fontSize="medium" />) },
+    { link: "/image_converssion", menus: "Image Converssion", icons: (<SettingsOverscanIcon fontSize="medium" />) },
+    { link: "#testimonials", menus: "testimonials", icons: (<ReviewsIcon fontSize="medium" />) },
+    { link: "#contact", menus: "contact", icons: (<PermPhoneMsgIcon fontSize="medium" />) },
   ]
   return (
     <Box id="header1" sx={{ display: 'flex', flexDirection: "column", justifyContent: "center" }}>
@@ -30,7 +32,7 @@ export function Header(props) {
         <ul>
           {menusIcons.map((x, key) => (
             <li key={key}>
-              <Link href={`#${x.menus}`} underline="none" className={`nav-link scrollto ${isActive === x.menus && 'active'}`} onClick={() => setIsActive(x.menus)}>
+              <Link href={`${x.link}`} underline="none" className={`nav-link scrollto ${isActive === x.menus && 'active'}`} onClick={() => setIsActive(x.menus)}>
                 <ListItemIcon sx={{ minWidth: 0 }} >
                   {x.icons}
                 </ListItemIcon>

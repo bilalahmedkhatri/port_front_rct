@@ -1,7 +1,6 @@
 // export { default as Header } from './Header/Header';
 
 export { Body } from './Body';
-export { Header } from './Header';
-export { Footer } from './Footer';
-
+export { ImageConvert } from './image_convert';
+export { default as CreateBlog } from './CreateBlog'
 
