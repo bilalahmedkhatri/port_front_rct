@@ -4,7 +4,7 @@ import { Box } from '@mui/system'
 
 export default function BlogsideBarSearchButton() {
     return (
-        <Box sx={{ mt: 6 }}>
+        <Box sx={{ mt: 3 }}>
             <TextField
                 id="standard-search"
                 label="Search field"

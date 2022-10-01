@@ -3,6 +3,7 @@ import { Button, Link, Typography } from '@mui/material'
 import { green, grey } from '@mui/material/colors'
 import { Box } from '@mui/system'
 import BlogWriterProfile from './BlogWriterProfile'
+import CustomButton from './CustomButton'
 
 const blogs = [
     { title: "django Developer" },
@@ -26,29 +27,23 @@ const Follow = styled('div')(({ theme }) => ({
 
 export default function BlogsideBarOtherBlogs() {
     return (
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ my: 3}}>
             <Typography component='p' mb={1} fontWeight='700' >Topics matching Django </Typography>
             {blogs.map((value) => (
                 <Follow>
                     <BlogWriterProfile py='0px' maxwidth="400" pl='0' />
-                    <Button sx={{
-                        fontSize: '11px',
-                        color: grey[50],
-                        px: 1,
-                        backgroundColor: green[500],
-                        fontWeight: 'bold',
-                        borderRadius: '15px',
-                        "&:hover" : {
-                            backgroundColor: green[600],
-                            // marginTop: '100px'
-                        }
-                    }}>
-                        Follow
-                    </Button>
+                    <CustomButton
+                        buttontext="follow"
+                        fontsize={11}
+                        texttransform='capitalize'
+                        textcolor={grey[50]}
+                        borderradius={15}
+                        bgcolor={green[500]}
+                        bghcolor={green[600]}
+                        fontweight='bold'
+                    />
                 </Follow>
             ))}
-            <br />
-            <Link href='' fontSize={10}>See all</Link>
         </Box>
     )
 }

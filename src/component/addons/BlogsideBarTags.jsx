@@ -2,6 +2,7 @@ import { Button, Link, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import { Box } from '@mui/system'
 import React from 'react'
+import { CustomButton } from '../../component'
 
 const Tags = [
     { tag: "django" },
@@ -18,10 +19,23 @@ export default function BlogsideBarTags() {
             <Typography component='p' fontWeight='700' >Topics matching Django </Typography>
             <Box sx={{ my: 1 }}>
                 {Tags.map((value) => (
-                    <Button sx={{ color: '#263238', mr: 1, px: 2, backgroundColor: grey[200], borderRadius: '20px', mt: 1 }}>{value.tag} </Button>
+                    <>
+                        <CustomButton
+                            buttontext={value.tag}
+                            texttransform='capitalize'
+                            textcolor={grey[800]}
+                            fontweight={600}
+                            bgcolor={grey[200]}
+                            borderradius={20}
+                            px={2}
+                            marginright={1}
+                            margintop={1}
+                            fontsize={11.5}
+                        />
+                    </>
                 ))}
             </Box>
-            <Link sx={{ marginTop: 20 }} href='' fontSize={10}>See all</Link>
+            <Link href='' fontSize={10}>See all</Link>
         </Box>
     )
 }

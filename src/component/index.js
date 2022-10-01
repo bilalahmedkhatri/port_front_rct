@@ -16,6 +16,9 @@ export { default as BlogsideBarButtons } from './addons/BlogsideBarButtons';
 export { default as BlogsideBarSearchButton } from './addons/BlogsideBarSearchButton';
 export { default as BlogsideBarTags } from './addons/BlogsideBarTags';
 export { default as BlogsideBarOtherBlogs } from './addons/BlogsideBarOtherBlogs';
+export { default as BlogsideBarUserProfile } from './addons/BlogsideBarUserProfile';
+export { default as BlogNavBar } from './addons/BlogNavBar';
+export { default as CustomButton } from './addons/CustomButton';
 
 // Block Component
 export { Header } from './block/Header';

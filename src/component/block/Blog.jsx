@@ -1,8 +1,7 @@
-import React from 'react'
 import { styled } from '@mui/material/styles';
-import { Box } from '@mui/system';
-import { Card, CardMedia, Container, Toolbar, Typography } from '@mui/material'
+import { Card, CardMedia, Container, Toolbar, Typography, Box} from '@mui/material'
 import { BlogWriterProfile, SocialLinks, BlogFigCaption } from '../../component'
+import { grey } from '@mui/material/colors'
 
 // social Icons
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -26,13 +25,14 @@ const CSToolbar = styled(Toolbar)(({ theme }) => ({
 }))
 
 export default function Blog() {
+    
     return (
         <Container sx={{ maxWidth: 750 }} maxWidth="750px" alignItems="center" justifyContent="center">
             <CSToolbar>
                 <BlogWriterProfile maxwidth="500px" py="8px"/>
-                <SocialLinks p_l="12px" social_profile={social_profile} align="left" />
+                <SocialLinks social_profile={social_profile} iconcolor={grey[500]} hovercolor={grey[900]} iconsize={20} />
             </CSToolbar>
-            <Typography variant='h1' component={"h1"} fontSize={32} fontWeight='bold' pt={3} >Introduction to Computer Vision & OpenCV in Python</Typography>
+            <Typography variant='h1' component={"h1"} fontSize={32} fontWeight='bold' mt={3} >Introduction to Computer Vision & OpenCV in Python</Typography>
             <Card sx={{ mt: 3, pb: 1 }}>
                 <CardMedia component="img" alt='test' image="https://media.gettyimages.com/photos/quaideazam-picture-id184944186" />
                 <BlogFigCaption />

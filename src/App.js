@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ImageConvert } from "./container";
+import { SingleBlogPage, TagBlogs } from "./container";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import "./App.css";
@@ -25,10 +25,13 @@ function App() {
         <Route path="/" element={<Portfolio />} />
       </Routes>
       <Routes>
-        <Route path="/image_converssion" element={<ImageConvert />} />
+        <Route path="/blop-post" element={<SingleBlogPage />} />
       </Routes>
       <Routes>
         <Route path="/blog/create-blog" element={<CreateBlog />} />
+      </Routes>
+      <Routes>
+        <Route path="/blog/search" element={<TagBlogs />} />
       </Routes>
     </BrowserRouter>
   )
