@@ -1,6 +1,6 @@
 import { Box, Divider } from '@mui/material'
 import { makeStyles } from '@mui/styles'
-import { BlogsideBarButtons, BlogsideBarSearchButton, BlogsideBarTags, BlogsideBarOtherBlogs, BlogsideBarUserProfile } from '../../component'
+import { BlogsideBarButtons, BlogsideBarSearchButton, BlogsideBarTags, BlogsideBarOtherBloggers, BlogsideBarUserProfile } from '../../component'
 
 const userStyles = makeStyles({
   root: {
@@ -22,7 +22,7 @@ export default function BlogSideBar() {
       <BlogsideBarUserProfile />
       <BlogsideBarTags />
       <Divider sx={{ marginTop:4 }} />
-      <BlogsideBarOtherBlogs />
+      <BlogsideBarOtherBloggers done={false}/>
     </Box>
   )
 }
