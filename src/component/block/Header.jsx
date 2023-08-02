@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Box, Link, Typography } from '@mui/material'
-import './style.css'
+import { Box, Link } from '@mui/material'
+// import './style.css'
 
 import ListItemIcon from '@mui/material/ListItemIcon';
 
@@ -10,7 +10,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
-import SettingsOverscanIcon from '@mui/icons-material/SettingsOverscan';
 import { grey } from "@mui/material/colors";
 
 
@@ -22,7 +21,6 @@ export function Header() {
     { link: "#home", menus: "home", icons: (<HouseIcon fontSize="medium" />) },
     { link: "#about", menus: "about", icons: (<PersonIcon fontSize="medium" />) },
     { link: "#resume", menus: "resume", icons: (<DescriptionIcon fontSize="medium" />) },
-    { link: "/image_converssion", menus: "Image Converssion", icons: (<SettingsOverscanIcon fontSize="medium" />) },
     { link: "#testimonials", menus: "testimonials", icons: (<ReviewsIcon fontSize="medium" />) },
     { link: "#contact", menus: "contact", icons: (<PermPhoneMsgIcon fontSize="medium" />) },
   ]

@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { green, grey } from '@mui/material/colors'
 import BlogWriterProfile from './BlogWriterProfile'
 import CustomButton from './CustomButton'
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -10,8 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
-import { Link, sliderClasses } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { Link } from '@mui/material';
 
 const blogs = [
     { title: "django Developer" },
@@ -64,7 +62,11 @@ function Blogs() {
             {blogs.map((value) => (
                 <Card sx={{ display: 'flex', my: 1, boxShadow: 'none' }}>
                     <Box sx={{ width: '100%', maxwidth: 250, }}>
-                        <CardContent sx={{ p: 0, flex: '1 0 auto', pt: 0.3 }}>
+                        <CardContent sx={{
+                            p: 0, flex: '1 0 auto', "&.MuiCardContent-root:last-child": {
+                                pb: 1.5,
+                            }
+                        }}>
                             <Link href="" underline='none' color={grey[800]} >
                                 <Stack direction='row'>
                                     <Avatar sx={{ width: 25, height: 25, alignItems: 'center' }} />
@@ -73,30 +75,26 @@ function Blogs() {
                                     </Typography>
                                 </Stack>
                             </Link>
-                            <div>
-                                <Typography
-                                    variant="subtitle1"
-                                    color="#222222"
-                                    component="div"
-                                    fontSize={13}
-                                    fontWeight='bold'
-                                    lineHeight={1.3}
-                                    pl={0.3}
-                                    pt={0.7}
-                                    id='countlines'
-                                    // width={200}
-                                    // height={20}
-                                    sx={{
-                                        WebkitLineClamp: '2',
-                                        WebkitBoxOrient: 'vertical',
-                                        display: '-webkit-box',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                    }}
-                                >
-                                    Mac Miller Live information and going to be best in this session Space
-                                </Typography>
-                            </div>
+                            <Typography
+                                variant="subtitle1"
+                                color="#222222"
+                                component="div"
+                                fontSize={13}
+                                fontWeight='bold'
+                                lineHeight={1.3}
+                                pl={0.3}
+                                pt={0.7}
+                                id='countlines'
+                                sx={{
+                                    WebkitLineClamp: '2',
+                                    WebkitBoxOrient: 'vertical',
+                                    display: '-webkit-box',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                }}
+                            >
+                                Mac Miller Live information and going to be best in this session Space
+                            </Typography>
                         </CardContent>
                     </Box>
                     <CardMedia

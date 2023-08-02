@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { About, ContactBlock, FirstView, MobileRes, Resume, Skill, Testimonial } from '../component'
+import { About, ContactBlock, FirstView, MobileRes, Resume, Skill, ProjectView, Testimonial } from '../../component'
 
 
-export const Body = () => {
+export default function Body() {
   return (
     <>
       <MobileRes />
@@ -10,6 +9,7 @@ export const Body = () => {
       <About />
       <Skill />
       <Resume />
+      <ProjectView />
       <Testimonial />
       <ContactBlock />
     </>

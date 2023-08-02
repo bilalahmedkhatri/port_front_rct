@@ -5,16 +5,16 @@ import { SectionTitle, ProgressBar2 } from "../../component"
 export default function Skill() {
 
     const leftSkillSet = [
-        { language: "HTML5", stopValue: 90, timeRange: 40 },
-        { language: "CSS3 & SCSS", stopValue: 80, timeRange: 40 },
-        { language: "JavaScript", stopValue: 40, timeRange: 40 },
-        { language: "Python", stopValue: 80, timeRange: 40 },
+        { language: "HTML5, CSS3 & SCSS", stopValue: 70, timeRange: 40 },
+        { language: "JavaScript", stopValue: 37, timeRange: 40 },
+        { language: "Python", stopValue: 60, timeRange: 40 },
+        { language: "MUI & Bootstrap", stopValue: 55, timeRange: 40 },
     ]
     const rightSkillSet = [
-        { language: "React JS", stopValue: 70, timeRange: 40 },
-        { language: "Django", stopValue: 75, timeRange: 40 },
-        { language: "Odoo", stopValue: 80, timeRange: 40 },
-        { language: "Docker, Git, AWS, and Linux", stopValue: 70, timeRange: 40 },
+        { language: "React JS", stopValue: 40, timeRange: 40 },
+        { language: "Django", stopValue: 55, timeRange: 40 },
+        { language: "Machine Learning", stopValue: 20, timeRange: 40 },
+        { language: "Docker, Git, AWS, and Linux", stopValue: 60, timeRange: 40 },
     ]
 
     return (

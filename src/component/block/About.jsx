@@ -4,18 +4,18 @@ import BackgroundImage from "../../media/img/profile_pic.webp";
 
 export default function About() {
   const infoData1 = [
-    { data: "Website:", info: "www.azeemlab.com", option: "link" },
-    { data: "Phone:", info: "+92 321 3009321", option: false },
-    { data: "City:", info: "Karachi, Pakistan", option: false },
+    { data: "Website", info: "www.azeemlab.com", option: "link" },
+    { data: "WhatsApp", info: "+92 321 3009321", option: false },
+    { data: "City", info: "Karachi, Pakistan", option: false },
   ]
 
   const infoData2 = [
-    { data: "Degree:", info: "Bachelor", option: false },
-    { data: "Email:", info: "bilalahmedkhatri@outlook.com", option: "mail"},
-    { data: "Freelance:", info: "Available", option: false },
+    { data: "Degree", info: "Bachelor", option: false },
+    { data: "Email", info: "bilalahmedkhatri@outlook.com", option: "mail"},
+    { data: "Freelance", info: "Available", option: false },
   ]
   return (
-    <section id="about">
+    // <section id="about">
       <Container data-aos="fade-up">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -64,6 +64,6 @@ export default function About() {
           </Grid >
         </Grid >
       </Container >
-    </section>
+    // </section>
   );
 }

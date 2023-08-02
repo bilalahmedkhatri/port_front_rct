@@ -28,7 +28,7 @@ export default function InsetList({ data, info, option }) {
             aria-label="contacts"
         >
             <ListItem disablePadding >
-                <ListItemIcon sx={{ minWidth: '1.78em' }}>
+                <ListItemIcon sx={{ minWidth: '1.78em', color:'#ffdf00' }}>
                     <StarIcon />
                 </ListItemIcon>
                 <ListItemText primary={data} sx={{ maxWidth: '5.4rem', }} primaryTypographyProps={{ fontWeight: 600 }} />

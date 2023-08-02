@@ -4,7 +4,6 @@ import { BlogsideBarButtons, BlogsideBarSearchButton, BlogsideBarTags, BlogsideB
 
 const userStyles = makeStyles({
   root: {
-    position: '-webkit-sticky',
     position: 'sticky',
     top: '2rem',
     height: '100%',

@@ -67,7 +67,7 @@ export default function Slider() {
         {
           testimonials.map((v, key) => {
             console.log(v.test_image_02)
-            return (
+            return (  
               <SwiperSlide align='center' key={key}>
                 <Stack direction="row" style={{ justifyContent: "center", display: "flex" }} spacing={1}>
                   <Avatar

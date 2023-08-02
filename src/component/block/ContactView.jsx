@@ -54,7 +54,8 @@ export default function ContactView() {
         <Grid item xs={9} sm md={8} lg={8} container>
           <ContactInfo
             MainTitle="Location:"
-            Paragraph="Karachi, Pakistan"
+            Paragraph1="Current - Moscow, Russia"
+            Paragraph2="From - Karachi, Pakistan"
           />
         </Grid>
       </Grid>
@@ -85,7 +86,8 @@ export default function ContactView() {
         <Grid item xs={9} sm md={8} lg={8} container>
           <ContactInfo
             MainTitle="Email:"
-            Paragraph="bilalahmedkhatri@outlook.com"
+            Paragraph2="bilalahmedkhatri@outlook.com"
+            Capitalize="lowercase"
           />
         </Grid>
       </Grid>
@@ -114,7 +116,11 @@ export default function ContactView() {
           </Box>
         </Grid>
         <Grid item xs={9} sm md={8} lg={8} container>
-          <ContactInfo MainTitle="Cell:" Paragraph="+92 321 300 9321" />
+          <ContactInfo 
+            MainTitle="Cell No:"
+            Paragraph1="WhatsApp +92 321 300 93 21"
+            Paragraph2="call +7 999 85 15 949"
+          />
         </Grid>
       </Grid>
     </>

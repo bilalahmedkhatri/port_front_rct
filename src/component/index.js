@@ -16,9 +16,8 @@ export { default as BlogsideBarButtons } from './addons/BlogsideBarButtons';
 export { default as BlogsideBarSearchButton } from './addons/BlogsideBarSearchButton';
 export { default as BlogsideBarTags } from './addons/BlogsideBarTags';
 export { default as BlogsideBarOtherBloggers } from './addons/BlogsideBarOtherBloggers';
-// export { default as BlogsideBarOtherBlogs } from './addons/BlogsideBarOtherBlogs';
 export { default as BlogsideBarUserProfile } from './addons/BlogsideBarUserProfile';
-export { default as BlogNavBar } from './addons/BlogNavBar';
+export { default as BlogNavBar } from './block/blog/BlogNavBar';
 export { default as CustomButton } from './addons/CustomButton';
 
 // Block Component
@@ -30,6 +29,7 @@ export { default as FirstView } from './block/FirstView'
 export { default as FormView } from './block/FormView'
 export { default as Resume } from './block/Resume'
 export { default as Skill } from './block/Skill'
+export { default as ProjectView } from './block/ProjectView'
 export { default as Testimonial } from './block/Testimonial'
 export { Footer } from './block/Footer';
 export { default as Blog } from './block/Blog';
