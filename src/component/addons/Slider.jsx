@@ -46,7 +46,7 @@ export default function Slider() {
   useEffect(() => {
     async function getTestimonial() {
       try {
-        const testimonial = await axios.get('/testimonial/')
+        const testimonial = await axios.get('/testimonial-class/')
         setTestimonials(testimonial.data)
       } catch (error) {
         console.log(error)
@@ -61,13 +61,13 @@ export default function Slider() {
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 5000 }}
         navigation
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
       >
         {
           testimonials.map((v, key) => {
-            console.log(v.test_image_02)
-            return (  
+            console.log('test testmonials 01 ; ', v.test_image_02)
+            return (
               <SwiperSlide align='center' key={key}>
                 <Stack direction="row" style={{ justifyContent: "center", display: "flex" }} spacing={1}>
                   <Avatar
