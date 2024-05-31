@@ -20,7 +20,6 @@ export default function SingleBlog() {
           </Grid>
         </Grid>
       </Container>
-
       {/* <Body />
         <Footer /> */}
     </>
