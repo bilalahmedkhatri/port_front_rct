@@ -8,8 +8,8 @@ const apiBackend = axios.create({
   },
 });
 
-// Get Data
-export async function getTestimonialData(endpoint) {
+// Get Data from API
+export async function BackendAPIData(endpoint) {
   try {
     const bResponse = await apiBackend.get(endpoint);
     return { bStatus: "success", bRes: bResponse.data };

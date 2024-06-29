@@ -1,7 +1,6 @@
 import { Container, Grid } from "@mui/material";
-import { Slider, SectionTitle } from "../../component";
+import { Slider, SectionTitle, BackendAPIData } from "..";
 import { createContext, useState, useEffect } from "react";
-import { getTestimonialData } from "../../axios/main";
 
 export const Context = createContext();
 
@@ -9,18 +8,15 @@ export default function Testimonial() {
   const [testimonialData, setTestimonialData] = useState([]);
 
   useEffect(() => {
-    console.log("test testmonials 00 ; ", typeof testimonialData);
     async function getTestimonial() {
       try {
-        const testimonial = await getTestimonialData("api/testimonial/");
+        const testimonial = await BackendAPIData("api-portfolio/testimonial/");
         setTestimonialData(testimonial.bRes);
-        console.log("test testmonials 01 ; ", testimonial.bRes);
       } catch (error) {
         console.log(error);
       }
     }
     getTestimonial();
-    console.log("test testmonials 02 ; ", typeof testimonialData);
   }, []);
 
   return (
