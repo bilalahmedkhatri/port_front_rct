@@ -1,6 +1,6 @@
 # Port Front React
 
-Port Front React is a comprehensive React-based front-end application designed to showcase your portfolio and personal blog. It provides a user-friendly interface for visitors to explore your work, skills, and experience, as well as read and search through your blog posts.
+My Portfolio is a comprehensive Django and React based application designed to showcase my portfolio and personal blog. It provides a user-friendly interface for visitors to explore my work, skills, and experience, as well as read and search through my blog posts.
 
 ## Features
 
@@ -15,9 +15,15 @@ Port Front React is a comprehensive React-based front-end application designed t
 - React
 - React Router
 - Material-UI
+- Axios
 - AOS (Animate on Scroll)
 - React Draft WYSIWYG
+-
 
 ## Getting Started
 
-- Clone the repository:
+- Clone the repository and update as per your need
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
