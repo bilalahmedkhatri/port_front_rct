@@ -11,7 +11,7 @@ export default function Testimonial() {
     async function getTestimonial() {
       try {
         const testimonial = await BackendAPIData("api-portfolio/testimonial/");
-        setTestimonialData(testimonial.bRes);
+        setTestimonialData(testimonial);
       } catch (error) {
         console.log(error);
       }

@@ -14,15 +14,6 @@ export async function BackendAPIData(endpoint) {
     const bResponse = await apiBackend.get(endpoint);
     return { bStatus: "success", bRes: bResponse.data };
   } catch (error) {
-    return { bStatus: "fail", bRes: "server not running" };
+    return { bStatus: "failed", bRes: "server not running" };
   }
 }
-
-export const fetchPerson = async (id) => {
-  try {
-    const { data } = await axios.get(`https://swapi.dev/api/people/${id}`);
-    return { bStatus: "success", bResponse: data };
-  } catch (error) {
-    return { bStatus: "failure", bResponse: error };
-  }
-};

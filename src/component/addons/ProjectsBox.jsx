@@ -10,54 +10,60 @@ export default function ProjectsCard() {
   const { projectData } = React.useContext(Context);
   return (
     <Fragment>
-      {projectData.map((value, key) => {
-        return (
-          <Grid item xs={12} sm={6} md={4} key={key}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={value.image}
-                  alt={value.title}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    sx={{
-                      display: "-webkit-box",
-                      overflow: "hidden",
-                      WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 2,
-                    }}
-                  >
-                    {value.title}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      display: "-webkit-box",
-                      overflow: "hidden",
-                      WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 3,
-                    }}
-                    variant="body1"
-                    color="text.secondary"
-                  >
-                    {value.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        );
-      })}
+      {projectData.bStatus === "success" ? (
+        <>
+          {projectData.bRes.map((value, key) => {
+            return (
+              <Grid item xs={12} sm={6} md={4} key={key}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={value.image}
+                      alt={value.title}
+                    />
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                        sx={{
+                          display: "-webkit-box",
+                          overflow: "hidden",
+                          WebkitBoxOrient: "vertical",
+                          WebkitLineClamp: 2,
+                        }}
+                      >
+                        {value.title}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          display: "-webkit-box",
+                          overflow: "hidden",
+                          WebkitBoxOrient: "vertical",
+                          WebkitLineClamp: 3,
+                        }}
+                        variant="body1"
+                        color="text.secondary"
+                      >
+                        {value.description}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Share
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            );
+          })}
+        </>
+      ) : (
+        ""
+      )}
     </Fragment>
   );
 }

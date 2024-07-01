@@ -11,13 +11,8 @@ export default function ProjectView() {
 
   React.useEffect(() => {
     async function getPojects() {
-      try {
-        const projects = await BackendAPIData("api-portfolio/projects/");
-        setProjectData(projects.bRes);
-        console.log("res", projects.bRes);
-      } catch (error) {
-        console.error("error");
-      }
+      const projects = await BackendAPIData("api-portfolio/projects/");
+      setProjectData(projects);
     }
     getPojects();
   }, []);
@@ -31,7 +26,7 @@ export default function ProjectView() {
   return (
     // < !-- ======= Projects Section ======= -->
     <Context.Provider value={{ projectData }}>
-      {projectData.length > 0 ? (
+      {projectData.bStatus === "success" ? (
         <section id="projects">
           <Container fixed data-aos="fade-up">
             <ProjectViewCustomStyle container spacing={4}>
@@ -48,60 +43,3 @@ export default function ProjectView() {
     </Context.Provider>
   );
 }
-
-// function MultiActionAreaCard() {
-//   const { projectData } = React.useContext(Context);
-//   return (
-//     {projectData.map(() => {
-
-//       <Grid item xs={12} sm={6} md={4}>
-//       <Card sx={{ maxWidth: 345 }}>
-//         <CardActionArea>
-//           <CardMedia
-//           component="img"
-//           height="140"
-//           image="/static/images/cards/contemplative-reptile.jpg"
-//           alt="green iguana"
-//           />
-//           <CardContent>
-//           <Typography
-//           gutterBottom
-//           variant="h5"
-//           component="div"
-//           sx={{
-//             display: "-webkit-box",
-//             overflow: "hidden",
-//             WebkitBoxOrient: "vertical",
-//             WebkitLineClamp: 2,
-//           }}
-//           >
-//           Lizards are a widespread group of squamate reptiles, with over
-//               6,000 species, ranging across all continents
-//             </Typography>
-//             <Typography
-//               sx={{
-//                 display: "-webkit-box",
-//                 overflow: "hidden",
-//                 WebkitBoxOrient: "vertical",
-//                 WebkitLineClamp: 3,
-//               }}
-//               variant="body1"
-//               color="text.secondary"
-//               >
-//               Lizards are a widespread group of squamate reptiles, with over
-//               6,000 species, ranging across all continents except Antarctica
-//               Lizards are a widespread group of squamate reptiles, with over
-//               6,000 species, ranging across all continents except Antarctica
-//             </Typography>
-//           </CardContent>
-//         </CardActionArea>
-//         <CardActions>
-//           <Button size="small" color="primary">
-//             Share
-//             </Button>
-//         </CardActions>
-//       </Card>
-//       </Grid>
-//     })}
-//   );
-// }
