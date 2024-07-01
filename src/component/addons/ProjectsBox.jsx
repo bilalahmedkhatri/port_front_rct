@@ -16,7 +16,7 @@ export default function ProjectsCard() {
             return (
               <Grid item xs={12} sm={6} md={4} key={key}>
                 <Card sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
+                  <CardActionArea href={value.video} target="_blank">
                     <CardMedia
                       component="img"
                       height="140"
