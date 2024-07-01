@@ -9,12 +9,8 @@ export default function Testimonial() {
 
   useEffect(() => {
     async function getTestimonial() {
-      try {
-        const testimonial = await BackendAPIData("api-portfolio/testimonial/");
-        setTestimonialData(testimonial);
-      } catch (error) {
-        console.log(error);
-      }
+      const testimonial = await BackendAPIData("api-portfolio/testimonial/");
+      setTestimonialData(testimonial);
     }
     getTestimonial();
   }, []);
@@ -22,7 +18,7 @@ export default function Testimonial() {
   return (
     // < !-- ======= Testimonials Section ======= -->
     <Context.Provider value={{ testimonialData }}>
-      {testimonialData.length > 0 ? (
+      {testimonialData.bStatus === "success" ? (
         <section id="testimonials">
           <Container fixed>
             <Grid container spacing={1}>

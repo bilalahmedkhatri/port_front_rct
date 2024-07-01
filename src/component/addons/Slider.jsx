@@ -46,7 +46,7 @@ export default function Slider() {
   const classes = sliderCSS();
   return (
     <ThemeProvider theme={theme}>
-      {testimonialData.rStatus === "success" ? (
+      {testimonialData.bStatus === "success" ? (
         <Swiper
           modules={[Navigation, Autoplay]}
           autoplay={{ delay: 5000 }}
