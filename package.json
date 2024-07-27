@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp -r public/favicon /home/bilal/Developement/portfolio/Portfolio_front_app/static/ && rm -rf /home/bilal/Developement/portfolio/Portfolio_front_app/favicon",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch": "npm-watch"
