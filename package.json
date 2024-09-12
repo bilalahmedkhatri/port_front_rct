@@ -3,7 +3,11 @@
   "homepage": "https://bilalahmed.dev",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:8000/",
+  "_comment": "manual proxy added ", 
+  "options": {
+    "allowedHosts": ["localhost", ".localhost"],
+    "proxy": "http://127.0.0.1:8001/"
+  },
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -27,6 +31,8 @@
     "waypoints": "^4.0.1",
     "web-vitals": "^2.1.2"
   },
+
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp -r public/favicon /home/bilal/Developement/portfolio/Portfolio_front_app/static/ && rm -rf /home/bilal/Developement/portfolio/Portfolio_front_app/favicon",
