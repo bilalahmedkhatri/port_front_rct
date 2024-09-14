@@ -25,6 +25,7 @@ export default function Skill() {
     "Django",
     "Flask",
     "FastAPI",
+    "Odoo",
     "Requests",
     "Websockets",
     "Numpy",
@@ -45,6 +46,8 @@ export default function Skill() {
     "Git",
     "AWS",
     "Linux",
+    "API",
+    "RESTful API",
   ];
 
   return (
