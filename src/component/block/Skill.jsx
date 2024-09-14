@@ -59,32 +59,27 @@ export default function Skill() {
             them, with theis programming languages.
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={6} className="skills-content">
-          {leftSkillSet.map((d, k) => (
-            <ProgressBar2
-              key={k}
-              language={d.language}
-              stopValue={d.stopValue}
-              timeRange={d.timeRange}
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+          spacing={2}
+          className="skills-content"
+        >
+          {tags.map((tag, index) => (
+            <Chip
+              label={tag}
+              key={index}
+              sx={{
+                mt: 2,
+                mr: 1,
+                borderRadius: 3,
+                fontSize: 15,
+              }}
             />
           ))}
-        </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={6} className="skills-content">
-          {rightSkillSet.map((d, k) => (
-            <ProgressBar2
-              key={k}
-              language={d.language}
-              stopValue={d.stopValue}
-              timeRange={d.timeRange}
-            />
-          ))}
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} className="skills-content">
-          <Stack direction="row" spacing={1} sx={{ marginTop: 2 }}>
-            {tags.map((tag, index) => (
-              <Chip label={tag} key={index} deleteIcon={<DoneIcon />} />
-            ))}
-          </Stack>
         </Grid>
       </Grid>
     </Container>
