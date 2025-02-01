@@ -1,20 +1,7 @@
-import { Container, Typography, Grid, Chip, Stack } from "@mui/material";
-import DoneIcon from "@mui/icons-material/Done";
-import { SectionTitle, ProgressBar2 } from "../../component";
+import { Container, Typography, Grid, Chip } from "@mui/material";
+import { SectionTitle} from "../../component";
 
 export default function Skill() {
-  const leftSkillSet = [
-    { language: "HTML5, CSS3 & SCSS", stopValue: 70, timeRange: 40 },
-    { language: "JavaScript", stopValue: 37, timeRange: 40 },
-    { language: "Python", stopValue: 60, timeRange: 40 },
-    { language: "MUI & Bootstrap", stopValue: 55, timeRange: 40 },
-  ];
-  const rightSkillSet = [
-    { language: "React JS", stopValue: 40, timeRange: 40 },
-    { language: "Django", stopValue: 55, timeRange: 40 },
-    { language: "Machine Learning", stopValue: 20, timeRange: 40 },
-    { language: "Docker, Git, AWS, and Linux", stopValue: 60, timeRange: 40 },
-  ];
 
   const tags = [
     "HTML5",
@@ -25,6 +12,7 @@ export default function Skill() {
     "Django",
     "Flask",
     "FastAPI",
+    "LangChain",
     "Odoo",
     "Requests",
     "Websockets",
@@ -68,7 +56,6 @@ export default function Skill() {
           sm={12}
           md={12}
           lg={12}
-          spacing={2}
           className="skills-content"
         >
           {tags.map((tag, index) => (

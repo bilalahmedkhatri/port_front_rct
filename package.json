@@ -1,28 +1,38 @@
 {
   "name": "Bilal Ahmed - PortFolio",
   "homepage": "https://bilalahmed.dev",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
-  "_comment": "manual proxy added ", 
+  "_comment": "manual proxy added ",
   "options": {
-    "allowedHosts": ["localhost", ".localhost"],
+    "allowedHosts": [
+      "localhost",
+      ".localhost"
+    ],
     "proxy": "http://127.0.0.1:8001/"
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.6.1",
-    "@mui/material": "^5.2.5",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^5.16.14",
+    "@mui/material": "^5.16.14",
     "@mui/styled-engine-sc": "^5.1.0",
     "@mui/styles": "^5.6.2",
+    "@mui/x-data-grid": "^7.23.6",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
+    "dompurify": "^3.2.3",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "html-to-draftjs": "^1.5.0",
     "mui-rte": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-helmet": "^6.1.0",
     "react-scripts": "5.0.0",
     "serve": "^13.0.2",
     "styled-components": "^5.3.3",
@@ -31,8 +41,6 @@
     "waypoints": "^4.0.1",
     "web-vitals": "^2.1.2"
   },
-
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp -r public/favicon /home/bilal/Developement/portfolio/Portfolio_front_app/static/ && rm -rf /home/bilal/Developement/portfolio/Portfolio_front_app/favicon",
@@ -67,6 +75,6 @@
     }
   },
   "devDependencies": {
-    "react-router-dom": "^6.4.1"
+    "react-router-dom": "^6.28.1"
   }
 }

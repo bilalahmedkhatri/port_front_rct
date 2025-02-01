@@ -34,8 +34,7 @@ export function Footer() {
               component="div"
               sx={{ marginTop: "0.5rem" }}
             >
-              Convert your Idea to your Business, That Business Generate your{" "}
-              <strong>INCOME</strong>.
+              Convert your Idea to your Business.
             </Typography>
             <Stack
               sx={{ marginTop: "1rem" }}

@@ -1,7 +1,7 @@
 import { Grid, Typography, Box } from "@mui/material";
 import { blueGrey } from "@mui/material/colors";
 
-export default function ContactInfo() {
+export default function ContactAdd() {
   return (
     <Grid item xs container direction="column">
       <Grid item>
@@ -11,10 +11,10 @@ export default function ContactInfo() {
             textTransform: "capitalize",
           }}
           >
-            <strong>WhatsApp</strong><br />
-            +92 321 300 9321<br />
-            <strong>Phone & Telegram</strong><br />
-            +7 999 85 15 949
+            <strong>Home</strong><br />
+            Karachi, Pakistan<br />
+            <strong>Current</strong><br />
+            Moscow, Russia
           </Box>
         </Typography>
       </Grid>

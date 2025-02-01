@@ -1,9 +1,11 @@
 import { Grid, Typography, Box } from "@mui/material";
 import { blueGrey } from "@mui/material/colors";
+import { useEffect } from "react";
 
-export default function ContactInfo() {
+export default function ContactEmail() {
+
   return (
-    <Grid item xs container direction="column">
+    <Grid item xs container direction="column" marginTop="0.8rem">
       <Grid item>
         <Typography component="dev">
           <Box sx={{
@@ -11,10 +13,7 @@ export default function ContactInfo() {
             textTransform: "capitalize",
           }}
           >
-            <strong>WhatsApp</strong><br />
-            +92 321 300 9321<br />
-            <strong>Phone & Telegram</strong><br />
-            +7 999 85 15 949
+            bilalahmedkhatri@outlook.com
           </Box>
         </Typography>
       </Grid>

@@ -1,5 +1,5 @@
 import { Grid, Box } from "@mui/material";
-import { ContactInfo } from "../../component";
+import { ContactAdd, ContactEmail, ContactInfo } from "../../component";
 import { styled } from "@mui/material/styles";
 
 import { green } from "@mui/material/colors";
@@ -23,15 +23,13 @@ export default function ContactView() {
   });
 
   const primary_green = green[500];
+
   const primary_green_light = green[50];
 
   return (
-    <>
-      <Grid
-        container
-        spacing={1}
+    <Grid container spacing={2}>
+      <Grid item xs={9} sm md={4} lg={4} container
         sx={{
-          marginBottom: 4,
           // Hover on child classes
           "&:hover .hover1": {
             bgcolor: primary_green,
@@ -41,29 +39,18 @@ export default function ContactView() {
           },
         }}
       >
-        <Grid item>
-          <Box sx={{ width: 50 }}>
-            <BOX className="hover1">
-              <LocationOnOutlinedIcon
-                className="hover2"
-                sx={{ fontSize: 27, color: green[500] }}
-              />
-            </BOX>
-          </Box>
-        </Grid>
-        <Grid item xs={9} sm md={8} lg={8} container>
-          <ContactInfo
-            MainTitle="Location:"
-            Paragraph1="Current - Moscow, Russia"
-            Paragraph2="From - Karachi, Pakistan"
-          />
-        </Grid>
+        <Box sx={{ width: 50, mr: 2 }}>
+          <BOX className="hover1">
+            <LocationOnOutlinedIcon
+              className="hover2"
+              sx={{ fontSize: 27, color: green[500] }}
+            />
+          </BOX>
+        </Box>
+        <ContactAdd />
       </Grid>
-      <Grid
-        container
-        spacing={1}
+      <Grid item xs={9} sm md={4} lg={4} container
         sx={{
-          marginBottom: 4,
           // Hover on child classes
           "&:hover .hover1": {
             bgcolor: primary_green,
@@ -71,31 +58,19 @@ export default function ContactView() {
           "&:hover .hover2": {
             color: primary_green_light,
           },
-        }}
-      >
-        <Grid item>
-          <Box sx={{ width: 50 }}>
-            <BOX className="hover1">
-              <MailOutlinedIcon
-                className="hover2"
-                sx={{ fontSize: 27, color: green[500] }}
-              />
-            </BOX>
-          </Box>
-        </Grid>
-        <Grid item xs={9} sm md={8} lg={8} container>
-          <ContactInfo
-            MainTitle="Email:"
-            Paragraph2="bilalahmedkhatri@outlook.com"
-            Capitalize="lowercase"
-          />
-        </Grid>
+        }}>
+        <Box sx={{ width: 50, mr: 2 }}>
+          <BOX className="hover1">
+            <PhoneIphoneOutlinedIcon
+              className="hover2"
+              sx={{ fontSize: 27, color: green[500] }}
+            />
+          </BOX>
+        </Box>
+        <ContactEmail />
       </Grid>
-      <Grid
-        container
-        spacing={1}
+      <Grid item xs={9} sm md={4} lg={4} container
         sx={{
-          marginBottom: 4,
           // Hover on child classes
           "&:hover .hover1": {
             bgcolor: primary_green,
@@ -103,26 +78,17 @@ export default function ContactView() {
           "&:hover .hover2": {
             color: primary_green_light,
           },
-        }}
-      >
-        <Grid item>
-          <Box sx={{ width: 50 }}>
-            <BOX className="hover1">
-              <PhoneIphoneOutlinedIcon
-                className="hover2"
-                sx={{ fontSize: 27, color: green[500] }}
-              />
-            </BOX>
-          </Box>
-        </Grid>
-        <Grid item xs={9} sm md={8} lg={8} container>
-          <ContactInfo 
-            MainTitle="Cell No:"
-            Paragraph1="WhatsApp +92 321 300 93 21"
-            Paragraph2="call +7 999 85 15 949"
-          />
-        </Grid>
+        }}>
+        <Box sx={{ width: 50, mr: 2 }}>
+          <BOX className="hover1">
+            <PhoneIphoneOutlinedIcon
+              className="hover2"
+              sx={{ fontSize: 27, color: green[500] }}
+            />
+          </BOX>
+        </Box>
+        <ContactInfo />
       </Grid>
-    </>
+    </Grid>
   );
 }

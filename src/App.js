@@ -7,7 +7,8 @@ import "aos/dist/aos.css";
 import Portfolio from "./site/portfolio";
 import CreateBlog from "./container/CreateBlog";
 import SingleBlog from "./site/singleblog";
-
+import CreateBlog2 from "./pages/blog/CreateBlog2";
+import BlogApp from "./blog/routes";
 
 function App() {
 
@@ -21,23 +22,21 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route path="/" element={<Portfolio />} />
       </Routes>
       <Routes>
         <Route path="/blop-post" element={<SingleBlogPage />} />
-      </Routes>
-      <Routes>
+        <Route path="/blog/create-blog2" element={<CreateBlog2 />} />
         <Route path="/single-blog-post" element={<SingleBlog />} />
-      </Routes>
-      <Routes>
         <Route path="/blog/create-blog" element={<CreateBlog />} />
-      </Routes>
-      <Routes>
         <Route path="/blog/search" element={<TagBlogs />} />
       </Routes>
-    </BrowserRouter>
+
+      {/* Blog App */}
+      <BlogApp />
+    </>
   )
 }
 

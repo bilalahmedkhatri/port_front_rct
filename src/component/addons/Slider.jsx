@@ -51,8 +51,8 @@ export default function Slider() {
           modules={[Navigation, Autoplay]}
           autoplay={{ delay: 5000 }}
           navigation
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           {testimonialData.bRes.map((v, key) => {
             return (

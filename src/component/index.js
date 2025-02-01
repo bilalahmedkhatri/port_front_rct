@@ -4,6 +4,8 @@
 export { BackendAPIData } from "../axios/main";
 
 // Addons Component
+export { default as ContactAdd } from "./addons/ContactAdd";
+export { default as ContactEmail } from "./addons/ContactEmail";
 export { default as ContactInfo } from "./addons/ContactInfo";
 export { default as MobileRes } from "./addons/MobileRes";
 export { default as SectionTitle } from "./addons/SectionTitle";
